@@ -1,0 +1,24 @@
+export IMGPKG_REGISTRY_HOSTNAME_0=registry.tanzu.vmware.com
+export IMGPKG_REGISTRY_USERNAME_0=clarkjo@vmware.com
+export IMGPKG_REGISTRY_PASSWORD_0=#1JLCclj#1JLCclj
+export IMGPKG_REGISTRY_HOSTNAME_1=registry.harbor.learn.tapsme.org
+export IMGPKG_REGISTRY_USERNAME_1=clarkjo
+export IMGPKG_REGISTRY_PASSWORD_1=@Password1
+export IMGPKG_REGISTRY_USERNAME=clarkjo
+export INSTALL_REGISTRY_PASSWORD=#1JLCclj#1JLCclj
+export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com/tanzu-application-platform/tap-packages
+export TAP_VERSION=1.6.4
+export INSTALL_REPO=tap-install-1.6.4
+
+export INSTALL_REGISTRY_USERNAME=clarkjo
+export INSTALL_REGISTRY_PASSWORD=#1JLCclj#1JLCclj
+export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.6.4
+
+export AWS_ACCOUNT_ID=430575431285
+export AWS_REGION=us-west-2
+export EKS_CLUSTER_NAME=tap-eks
+export TAP_PKGR_REPO=registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.6.4
+
+imgpkg copy -b registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:${TAP_VERSION} --to-repo ${INSTALL_REGISTRY_HOSTNAME}/${INSTALL_REPO}/tap-packages
+
+imgpkg copy -b registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:${TAP_VERSION} --to-repo ${INSTALL_REGISTRY_HOSTNAME}/${INSTALL_REPO}/tap-packages
