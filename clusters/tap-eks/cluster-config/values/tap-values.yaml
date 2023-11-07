@@ -34,15 +34,15 @@ buildservice:
   # Enable the build service k8s service account to bind to the AWS IAM Role
   kp_default_repository_aws_iam_role_arn: "arn:aws:iam::430575431285:role/tap-build-service"
 
-local_source_proxy:
-  # Takes the value from the project_path under the image_registry section of shared by default, but can be overridden by setting a different value.
-  repository: registry.harbor.learn.tapsme.org
-  push_secret:
-    # When set to true, the secret mentioned in this section is automatically exported to Local Source Proxy's namespace.
-    name: "EXTERNAL-REGISTRY-FOR-LOCAL-SOURCE-SECRET"
-    namespace: "EXTERNAL-REGISTRY-FOR-LOCAL-SOURCE-SECRET-NAMESPACE"
-    # When set to true, the secret mentioned in this section is automatically exported to Local Source Proxy's namespace.
-    create_export: true
+# local_source_proxy:
+#   # Takes the value from the project_path under the image_registry section of shared by default, but can be overridden by setting a different value.
+#   repository: registry.harbor.learn.tapsme.org
+#   push_secret:
+#     # When set to true, the secret mentioned in this section is automatically exported to Local Source Proxy's namespace.
+#     name: "EXTERNAL-REGISTRY-FOR-LOCAL-SOURCE-SECRET"
+#     namespace: "EXTERNAL-REGISTRY-FOR-LOCAL-SOURCE-SECRET-NAMESPACE"
+#     # When set to true, the secret mentioned in this section is automatically exported to Local Source Proxy's namespace.
+#     create_export: false
 
 ootb_templates:
   # Enable the config writer service to use cloud based iaas authentication
